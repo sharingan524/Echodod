@@ -1,0 +1,328 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./mobile-enhancements.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Core colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Semantic: Syntax Brand Colors */
+  --color-syntax-cyan: var(--syntax-cyan);
+  --color-syntax-slate: var(--syntax-slate);
+  --color-coral: var(--coral);
+
+  /* Solution accent colors */
+  --color-phone: var(--phone);
+  --color-messaging: var(--messaging);
+  --color-email: var(--email);
+
+  /* Charts */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Typography */
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-jetbrains);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  /* Geometry / feel */
+  --radius: 0.75rem;
+
+  /* ========================================
+     Echodod DESIGN SYSTEM
+     ======================================== */
+
+  /* Brand Core */
+  --syntax-cyan: #06b6d4; /* Electric Cyan - Intelligence Layer */
+  --syntax-slate: #64748b; /* Muted Slate - Infrastructure */
+  --coral: #fb7185; /* Alert / Accent */
+
+  /* Solution Accent Colors */
+  --phone: #3b82f6; /* Blue - Phone Systems */
+  --messaging: #10b981; /* Emerald - Messaging */
+  --email: #a855f7; /* Purple - Email */
+
+  /* Light mode (optional, still on-brand) */
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  /* Primary = Electric Cyan (Intelligence) */
+  --primary: #06b6d4;
+  --primary-foreground: #0f172a;
+
+  /* Subtle surfaces */
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+
+  /* Accent surfaces (hover highlights) */
+  --accent: #cffafe;
+  --accent-foreground: #0f172a;
+
+  /* Alert / eye-catcher */
+  --destructive: var(--coral);
+
+  /* Borders / inputs */
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #06b6d4;
+
+  /* Charts */
+  --chart-1: #06b6d4; /* cyan */
+  --chart-2: #0f172a; /* navy */
+  --chart-3: #fb7185; /* coral */
+  --chart-4: #64748b; /* slate */
+  --chart-5: #94a3b8; /* light slate */
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #0f172a;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #06b6d4;
+}
+
+.dark {
+  /* ========================================
+     DARK MODE - "Terminal Charcoal" World
+     ======================================== */
+
+  /* Brand Core */
+  --syntax-cyan: #06b6d4; /* Electric Cyan - Intelligence */
+  --syntax-slate: #64748b; /* Muted Slate - Infrastructure */
+  --coral: #fb7185;
+
+  /* Solution Accent Colors */
+  --phone: #3b82f6; /* Blue - Phone Systems */
+  --messaging: #10b981; /* Emerald - Messaging */
+  --email: #a855f7; /* Purple - Email */
+
+  /* Surfaces */
+  --background: #0f172a; /* Terminal Charcoal (slate-900) */
+  --foreground: #f8fafc; /* Clean near-white */
+
+  --card: #111c33; /* Slightly lifted navy */
+  --card-foreground: #f8fafc;
+
+  --popover: #111c33;
+  --popover-foreground: #f8fafc;
+
+  /* Primary = Electric Cyan (Intelligence Layer) */
+  --primary: #06b6d4;
+  --primary-foreground: #0f172a;
+
+  /* Subtle surfaces */
+  --secondary: #162341;
+  --secondary-foreground: #f8fafc;
+
+  --muted: #162341;
+  --muted-foreground: #94a3b8; /* slate-400 */
+
+  /* Accent surfaces (cyan-tinted hover panels) */
+  --accent: color-mix(in oklch, var(--primary) 16%, var(--background));
+  --accent-foreground: #f8fafc;
+
+  /* Alert / eye-catcher */
+  --destructive: var(--coral);
+
+  /* Borders / inputs */
+  --border: color-mix(in oklch, #ffffff 12%, transparent);
+  --input: color-mix(in oklch, #ffffff 16%, transparent);
+  --ring: #06b6d4;
+
+  /* Charts */
+  --chart-1: #06b6d4; /* cyan */
+  --chart-2: #38bdf8; /* sky */
+  --chart-3: #fb7185; /* coral */
+  --chart-4: #94a3b8; /* slate */
+  --chart-5: #e2e8f0;
+
+  /* Sidebar */
+  --sidebar: #111c33;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #0f172a;
+  --sidebar-accent: #162341;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: var(--border);
+  --sidebar-ring: #06b6d4;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Ambient glow backgrounds */
+  .bg-soft-glow {
+    background:
+      radial-gradient(
+        900px circle at 18% 12%,
+        color-mix(in oklch, var(--syntax-cyan) 22%, transparent),
+        transparent 48%
+      ),
+      radial-gradient(
+        750px circle at 82% 18%,
+        color-mix(in oklch, var(--coral) 18%, transparent),
+        transparent 52%
+      ),
+      radial-gradient(
+        900px circle at 50% 95%,
+        color-mix(in oklch, var(--foreground) 6%, transparent),
+        transparent 60%
+      );
+  }
+
+  /* ========================================
+     GLASSMORPHISM UTILITIES
+     "Glass Box" Aesthetic
+     ======================================== */
+
+  /* Standard glass panel */
+  .glass {
+    background: color-mix(in oklch, var(--card) 60%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in oklch, #ffffff 10%, transparent);
+  }
+
+  /* Subtle glass (lighter blur) */
+  .glass-subtle {
+    background: color-mix(in oklch, var(--card) 40%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in oklch, #ffffff 8%, transparent);
+  }
+
+  /* Heavy glass (stronger effect) */
+  .glass-heavy {
+    background: color-mix(in oklch, var(--card) 80%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid color-mix(in oklch, #ffffff 15%, transparent);
+  }
+
+  /* Glass with cyan tint (Intelligence Layer) */
+  .glass-cyan {
+    background: color-mix(
+      in oklch,
+      var(--syntax-cyan) 8%,
+      color-mix(in oklch, var(--card) 50%, transparent)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in oklch, var(--syntax-cyan) 20%, transparent);
+  }
+
+  /* Terminal/code block style */
+  .terminal {
+    background: #000000;
+    border: 1px solid color-mix(in oklch, #ffffff 10%, transparent);
+    font-family: var(--font-mono);
+  }
+
+  /* Solution accent borders */
+  .border-phone {
+    border-color: var(--phone);
+  }
+  .border-messaging {
+    border-color: var(--messaging);
+  }
+  .border-email {
+    border-color: var(--email);
+  }
+
+  /* Solution accent text */
+  .text-phone {
+    color: var(--phone);
+  }
+  .text-messaging {
+    color: var(--messaging);
+  }
+  .text-email {
+    color: var(--email);
+  }
+
+  /* Solution accent backgrounds */
+  .bg-phone {
+    background-color: var(--phone);
+  }
+  .bg-messaging {
+    background-color: var(--messaging);
+  }
+  .bg-email {
+    background-color: var(--email);
+  }
+
+  /* Syntax brand colors */
+  .text-syntax-cyan {
+    color: var(--syntax-cyan);
+  }
+  .text-syntax-slate {
+    color: var(--syntax-slate);
+  }
+  .bg-syntax-cyan {
+    background-color: var(--syntax-cyan);
+  }
+  .bg-syntax-slate {
+    background-color: var(--syntax-slate);
+  }
+}
