@@ -94,9 +94,9 @@
   --popover: #ffffff;
   --popover-foreground: #0f172a;
 
-  /* Primary = Electric Cyan (Intelligence) */
-  --primary: #06b6d4;
-  --primary-foreground: #0f172a;
+  /* Primary — solid blue CTA (white label), flat */
+  --primary: #3b66de;
+  --primary-foreground: #ffffff;
 
   /* Subtle surfaces */
   --secondary: #f1f5f9;
@@ -106,7 +106,7 @@
   --muted-foreground: #475569;
 
   /* Accent surfaces (hover highlights) */
-  --accent: #cffafe;
+  --accent: #e8eefc;
   --accent-foreground: #0f172a;
 
   /* Alert / eye-catcher */
@@ -115,10 +115,10 @@
   /* Borders / inputs */
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #06b6d4;
+  --ring: #3b66de;
 
   /* Charts */
-  --chart-1: #06b6d4; /* cyan */
+  --chart-1: #3b66de;
   --chart-2: #0f172a; /* navy */
   --chart-3: #fb7185; /* coral */
   --chart-4: #64748b; /* slate */
@@ -127,12 +127,12 @@
   /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #0f172a;
-  --sidebar-primary: #06b6d4;
-  --sidebar-primary-foreground: #0f172a;
+  --sidebar-primary: #3b66de;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #f1f5f9;
   --sidebar-accent-foreground: #0f172a;
   --sidebar-border: #e2e8f0;
-  --sidebar-ring: #06b6d4;
+  --sidebar-ring: #3b66de;
 }
 
 .dark {
@@ -160,9 +160,9 @@
   --popover: #111c33;
   --popover-foreground: #f8fafc;
 
-  /* Primary = Electric Cyan (Intelligence Layer) */
-  --primary: #06b6d4;
-  --primary-foreground: #0f172a;
+  /* Primary — blue CTA, white text */
+  --primary: #4d7ae8;
+  --primary-foreground: #ffffff;
 
   /* Subtle surfaces */
   --secondary: #162341;
@@ -171,8 +171,8 @@
   --muted: #162341;
   --muted-foreground: #94a3b8; /* slate-400 */
 
-  /* Accent surfaces (cyan-tinted hover panels) */
-  --accent: color-mix(in oklch, var(--primary) 16%, var(--background));
+  /* Accent surfaces */
+  --accent: color-mix(in oklch, var(--primary) 22%, var(--background));
   --accent-foreground: #f8fafc;
 
   /* Alert / eye-catcher */
@@ -181,10 +181,10 @@
   /* Borders / inputs */
   --border: color-mix(in oklch, #ffffff 12%, transparent);
   --input: color-mix(in oklch, #ffffff 16%, transparent);
-  --ring: #06b6d4;
+  --ring: #4d7ae8;
 
   /* Charts */
-  --chart-1: #06b6d4; /* cyan */
+  --chart-1: #4d7ae8;
   --chart-2: #38bdf8; /* sky */
   --chart-3: #fb7185; /* coral */
   --chart-4: #94a3b8; /* slate */
@@ -193,12 +193,12 @@
   /* Sidebar */
   --sidebar: #111c33;
   --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #06b6d4;
-  --sidebar-primary-foreground: #0f172a;
+  --sidebar-primary: #4d7ae8;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #162341;
   --sidebar-accent-foreground: #f8fafc;
   --sidebar-border: var(--border);
-  --sidebar-ring: #06b6d4;
+  --sidebar-ring: #4d7ae8;
 }
 
 @layer base {
@@ -211,23 +211,43 @@
 }
 
 @layer utilities {
-  /* Ambient glow backgrounds */
+  /* White shell + soft mesh (blue left / coral–orange right), like dark mode glows but subtle on white */
   .bg-soft-glow {
-    background:
+    background-color: #ffffff;
+    background-image:
       radial-gradient(
-        900px circle at 18% 12%,
-        color-mix(in oklch, var(--syntax-cyan) 22%, transparent),
-        transparent 48%
+        ellipse 100% 85% at 14% 12%,
+        rgb(59 130 246 / 0.16) 0%,
+        rgb(96 165 250 / 0.05) 42%,
+        transparent 58%
       ),
       radial-gradient(
-        750px circle at 82% 18%,
-        color-mix(in oklch, var(--coral) 18%, transparent),
-        transparent 52%
+        ellipse 95% 80% at 86% 18%,
+        rgb(251 113 133 / 0.14) 0%,
+        rgb(249 115 22 / 0.08) 38%,
+        transparent 56%
+      ),
+      radial-gradient(ellipse 90% 70% at 48% 98%, rgb(59 130 246 / 0.05) 0%, transparent 48%);
+  }
+
+  /* If .dark is ever enabled on <html>, keep the same vibe but slightly stronger on charcoal */
+  .dark .bg-soft-glow {
+    background-color: #0f172a;
+    background-image:
+      radial-gradient(
+        ellipse 100% 85% at 14% 12%,
+        color-mix(in oklch, var(--syntax-cyan) 26%, transparent) 0%,
+        transparent 55%
       ),
       radial-gradient(
-        900px circle at 50% 95%,
-        color-mix(in oklch, var(--foreground) 6%, transparent),
-        transparent 60%
+        ellipse 95% 80% at 86% 18%,
+        color-mix(in oklch, var(--coral) 22%, transparent) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 90% 70% at 50% 95%,
+        color-mix(in oklch, #ffffff 5%, transparent) 0%,
+        transparent 55%
       );
   }
 
@@ -310,6 +330,21 @@
   }
   .bg-email {
     background-color: var(--email);
+  }
+
+  /* Dark cards on light pages (lifted navy — matches previous night theme) */
+  .night-surface {
+    background-color: #111c33 !important;
+    color: #f8fafc !important;
+    border-color: color-mix(in oklch, white 12%, transparent);
+  }
+
+  .night-surface .text-muted-foreground {
+    color: #94a3b8;
+  }
+
+  .night-surface :is(h1, h2, h3, h4) {
+    color: #f8fafc;
   }
 
   /* Syntax brand colors */

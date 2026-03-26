@@ -26,7 +26,7 @@ const accentDot: Record<string, string> = {
 
 export function NavSolutions() {
   return (
-    <NavigationMenu>
+    <NavigationMenu viewportClassName="night-surface rounded-xl border-white/10 shadow-lg">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">Solutions</NavigationMenuTrigger>
@@ -38,7 +38,7 @@ export function NavSolutions() {
                     href={s.href}
                     className={cn(
                       "group rounded-xl px-3 py-3 transition",
-                      "hover:bg-muted/60 focus:bg-muted/60"
+                      "hover:bg-white/10 focus:bg-white/10"
                     )}
                   >
                     <div className="flex items-center gap-2">
