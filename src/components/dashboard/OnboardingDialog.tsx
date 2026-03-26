@@ -93,7 +93,7 @@ export function OnboardingDialog() {
             return (
               <div
                 key={index}
-                className="border-border hover:bg-muted/50 flex items-start gap-4 rounded-lg border p-4 transition-colors"
+                className="border-border flex items-start gap-4 rounded-lg border p-4 transition-colors hover:bg-zinc-100"
               >
                 <div className="bg-primary/10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg">
                   <Icon className="text-primary h-5 w-5" />

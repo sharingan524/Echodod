@@ -38,12 +38,17 @@ export function Logo({ className, showText = true, size = "md" }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
       {/* Voice waveform icon */}
-      <div className={cn("flex items-center justify-center rounded-lg bg-slate-900", s.icon)}>
+      <div
+        className={cn(
+          "border-border flex items-center justify-center rounded-lg border bg-white shadow-sm",
+          s.icon
+        )}
+      >
         <div className={cn("flex items-center", s.gap)}>
           {s.bars.map((height, i) => (
             <div
               key={i}
-              className={cn("rounded-full bg-cyan-400", s.barWidth)}
+              className={cn("rounded-full bg-blue-500", s.barWidth)}
               style={{ height: `${height}px` }}
             />
           ))}

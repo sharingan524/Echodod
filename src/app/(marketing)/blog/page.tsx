@@ -86,7 +86,7 @@ export default function BlogIndexPage() {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="border-border hover:border-primary/30 hover:bg-card/50 group block rounded-xl border p-6 transition-all"
+            className="night-surface hover:border-primary/40 group block rounded-xl border border-white/10 p-6 shadow-md transition-all hover:shadow-lg"
           >
             <div className="flex items-center gap-3 text-xs">
               <span className="bg-primary/10 text-primary rounded-full px-2.5 py-0.5 font-medium">

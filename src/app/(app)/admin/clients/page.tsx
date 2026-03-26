@@ -178,7 +178,7 @@ export default function AdminClientsPage() {
                         <tr
                           key={client.id}
                           onClick={() => router.push(`/admin/clients/${client.id}`)}
-                          className="hover:bg-muted/50 cursor-pointer transition-colors"
+                          className="cursor-pointer transition-colors hover:bg-zinc-100"
                         >
                           <td className="py-3 pr-4">
                             <span className="font-medium">{businessName}</span>

@@ -132,8 +132,8 @@ function SignupContent() {
 
           {/* Progress indicator */}
           <div className="mb-6 flex items-center justify-center gap-2">
-            <div className={`h-2 w-16 rounded-full ${step >= 1 ? "bg-primary" : "bg-muted"}`} />
-            <div className={`h-2 w-16 rounded-full ${step >= 2 ? "bg-primary" : "bg-muted"}`} />
+            <div className={`h-2 w-16 rounded-full ${step >= 1 ? "bg-primary" : "bg-border"}`} />
+            <div className={`h-2 w-16 rounded-full ${step >= 2 ? "bg-primary" : "bg-border"}`} />
           </div>
 
           {/* Error Message */}

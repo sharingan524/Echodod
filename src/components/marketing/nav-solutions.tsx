@@ -19,7 +19,8 @@ const accentDot: Record<string, string> = {
   pink: "bg-pink-500",
   rose: "bg-rose-500",
   orange: "bg-orange-500",
-  cyan: "bg-cyan-500",
+  cyan: "bg-blue-500",
+  indigo: "bg-indigo-500",
   amber: "bg-amber-500",
   fuchsia: "bg-fuchsia-500",
 };

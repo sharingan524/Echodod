@@ -183,7 +183,7 @@ export default function PhoneSystemsContent() {
 
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 py-20">
-        <GlassCard className="p-12 text-center">
+        <GlassCard variant="night" className="p-12 text-center">
           <GlassCardContent className="p-0">
             <h2 className="text-3xl font-bold tracking-tight">Ready for a better phone system?</h2>
             <p className="text-muted-foreground mx-auto mt-4 max-w-lg">

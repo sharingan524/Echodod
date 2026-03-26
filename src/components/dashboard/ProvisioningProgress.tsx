@@ -90,7 +90,7 @@ export function ProvisioningProgress({ compact = false }: { compact?: boolean })
             </Button>
           </div>
           {/* Progress bar */}
-          <div className="bg-muted mt-3 h-1.5 overflow-hidden rounded-full">
+          <div className="bg-border mt-3 h-1.5 overflow-hidden rounded-full">
             <div
               className="h-full rounded-full bg-sky-400 transition-all duration-500"
               style={{ width: `${data.progress}%` }}
@@ -109,7 +109,7 @@ export function ProvisioningProgress({ compact = false }: { compact?: boolean })
       </div>
 
       {/* Progress bar */}
-      <div className="bg-muted h-2 overflow-hidden rounded-full">
+      <div className="bg-border h-2 overflow-hidden rounded-full">
         <div
           className="h-full rounded-full bg-sky-400 transition-all duration-500"
           style={{ width: `${data.progress}%` }}

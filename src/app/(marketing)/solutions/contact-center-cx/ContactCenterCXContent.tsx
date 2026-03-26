@@ -129,7 +129,7 @@ export default function ContactCenterCXContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
               viewport={{ once: true }}
-              className="border-border bg-card/50 rounded-xl border p-6 transition-all hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-md"
+              className="night-surface rounded-xl border border-white/10 p-6 shadow-md transition-all hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-lg"
             >
               <div className="flex items-start gap-3">
                 <Check className="mt-0.5 h-5 w-5 shrink-0 text-orange-500" />
@@ -171,9 +171,9 @@ export default function ContactCenterCXContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
               viewport={{ once: true }}
-              className="border-border bg-card/50 relative rounded-xl border p-6"
+              className="night-surface relative rounded-xl border border-white/10 p-6 shadow-md"
             >
-              <span className="text-4xl font-bold text-orange-500/20">{step.step}</span>
+              <span className="text-4xl font-bold text-orange-400/40">{step.step}</span>
               <h3 className="mt-2 font-semibold">{step.title}</h3>
               <p className="text-muted-foreground mt-2 text-sm">{step.description}</p>
             </motion.div>
@@ -182,7 +182,7 @@ export default function ContactCenterCXContent() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-20">
-        <GlassCard className="p-12 text-center">
+        <GlassCard variant="night" className="p-12 text-center">
           <GlassCardContent className="p-0">
             <h2 className="text-3xl font-bold tracking-tight">
               Ready to unify your contact center?

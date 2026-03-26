@@ -23,7 +23,8 @@ const accentColors: Record<string, string> = {
   pink: "border-l-pink-500 hover:shadow-pink-500/10",
   rose: "border-l-rose-500 hover:shadow-rose-500/10",
   orange: "border-l-orange-500 hover:shadow-orange-500/10",
-  cyan: "border-l-cyan-500 hover:shadow-cyan-500/10",
+  cyan: "border-l-blue-500 hover:shadow-blue-500/10",
+  indigo: "border-l-indigo-500 hover:shadow-indigo-500/10",
   amber: "border-l-amber-500 hover:shadow-amber-500/10",
   fuchsia: "border-l-fuchsia-500 hover:shadow-fuchsia-500/10",
 };
@@ -35,7 +36,8 @@ const accentDot: Record<string, string> = {
   pink: "bg-pink-500",
   rose: "bg-rose-500",
   orange: "bg-orange-500",
-  cyan: "bg-cyan-500",
+  cyan: "bg-blue-500",
+  indigo: "bg-indigo-500",
   amber: "bg-amber-500",
   fuchsia: "bg-fuchsia-500",
 };
@@ -131,7 +133,7 @@ export default function HomePage() {
             },
           ].map((item) => (
             <motion.div key={item.step} variants={fadeIn}>
-              <GlassCard hover="lift" className="h-full p-6">
+              <GlassCard variant="night" hover="lift" className="h-full p-6">
                 <GlassCardContent className="p-0">
                   <span className="text-primary text-sm font-semibold">{item.step}</span>
                   <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
@@ -184,7 +186,7 @@ export default function HomePage() {
             },
           ].map((item) => (
             <motion.div key={item.title} variants={fadeIn}>
-              <GlassCard hover="lift" className="h-full p-6">
+              <GlassCard variant="night" hover="lift" className="h-full p-6">
                 <GlassCardContent className="p-0">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                   <p className="text-muted-foreground mt-2 text-sm">{item.description}</p>
@@ -224,7 +226,7 @@ export default function HomePage() {
             <motion.div key={solution.href} variants={fadeIn}>
               <Link
                 href={solution.href}
-                className={`group bg-card/50 flex h-full flex-col rounded-xl border border-l-4 p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${accentColors[solution.accent]}`}
+                className={`night-surface group flex h-full flex-col rounded-xl border border-l-4 border-white/10 p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg ${accentColors[solution.accent]}`}
               >
                 <div className="flex items-center gap-2">
                   <span className={`h-2 w-2 rounded-full ${accentDot[solution.accent]}`} />
@@ -249,7 +251,7 @@ export default function HomePage() {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeIn}
         >
-          <GlassCard variant="cyan" className="p-12 text-center">
+          <GlassCard variant="night" className="p-12 text-center">
             <GlassCardContent className="p-0">
               <h2 className="text-3xl font-bold tracking-tight">
                 Ready to upgrade your business communications?

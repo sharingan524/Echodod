@@ -9,6 +9,7 @@ const glassCardVariants = cva("rounded-2xl transition-all duration-300", {
       subtle: "glass-subtle",
       heavy: "glass-heavy",
       cyan: "glass-cyan",
+      night: "night-surface border shadow-lg",
     },
     hover: {
       none: "",
