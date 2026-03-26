@@ -55,7 +55,7 @@ export const siteConfig = {
       description:
         "IVR flows, AI chatbots, and omnichannel routing — implemented and integrated so customers get answers on any channel.",
       hook: "Automate and unify every touchpoint.",
-      accent: "cyan" as const,
+      accent: "indigo" as const,
       benefit: "Self-service and handoff that scale",
     },
     {

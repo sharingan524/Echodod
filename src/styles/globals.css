@@ -74,17 +74,17 @@
      Echodod DESIGN SYSTEM
      ======================================== */
 
-  /* Brand Core */
-  --syntax-cyan: #06b6d4; /* Electric Cyan - Intelligence Layer */
+  /* Brand Core (syntax-cyan token = primary blue for links / highlights) */
+  --syntax-cyan: #2563eb;
   --syntax-slate: #64748b; /* Muted Slate - Infrastructure */
   --coral: #fb7185; /* Alert / Accent */
 
   /* Solution Accent Colors */
-  --phone: #3b82f6; /* Blue - Phone Systems */
+  --phone: #2563eb; /* Blue - Phone Systems */
   --messaging: #10b981; /* Emerald - Messaging */
   --email: #a855f7; /* Purple - Email */
 
-  /* Light mode (optional, still on-brand) */
+  /* Light mode — white-forward surfaces, blue interactive UI */
   --background: #ffffff;
   --foreground: #0f172a;
 
@@ -94,19 +94,19 @@
   --popover: #ffffff;
   --popover-foreground: #0f172a;
 
-  /* Primary = Electric Cyan (Intelligence) */
-  --primary: #06b6d4;
-  --primary-foreground: #0f172a;
+  /* Primary = blue (buttons, links, focus, badges) */
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
 
-  /* Subtle surfaces */
-  --secondary: #f1f5f9;
+  /* Surfaces — white-first (minimal tint only where contrast is needed) */
+  --secondary: #ffffff;
   --secondary-foreground: #0f172a;
 
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
+  --muted: #ffffff;
+  --muted-foreground: #64748b;
 
-  /* Accent surfaces (hover highlights) */
-  --accent: #cffafe;
+  /* Hover / soft panels — still reads as white on white */
+  --accent: #ffffff;
   --accent-foreground: #0f172a;
 
   /* Alert / eye-catcher */
@@ -115,90 +115,77 @@
   /* Borders / inputs */
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #06b6d4;
+  --ring: #2563eb;
 
   /* Charts */
-  --chart-1: #06b6d4; /* cyan */
-  --chart-2: #0f172a; /* navy */
-  --chart-3: #fb7185; /* coral */
-  --chart-4: #64748b; /* slate */
-  --chart-5: #94a3b8; /* light slate */
+  --chart-1: #2563eb;
+  --chart-2: #0f172a;
+  --chart-3: #fb7185;
+  --chart-4: #64748b;
+  --chart-5: #94a3b8;
 
   /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #0f172a;
-  --sidebar-primary: #06b6d4;
-  --sidebar-primary-foreground: #0f172a;
-  --sidebar-accent: #f1f5f9;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffffff;
   --sidebar-accent-foreground: #0f172a;
   --sidebar-border: #e2e8f0;
-  --sidebar-ring: #06b6d4;
+  --sidebar-ring: #2563eb;
 }
 
 .dark {
-  /* ========================================
-     DARK MODE - "Terminal Charcoal" World
-     ======================================== */
-
-  /* Brand Core */
-  --syntax-cyan: #06b6d4; /* Electric Cyan - Intelligence */
-  --syntax-slate: #64748b; /* Muted Slate - Infrastructure */
+  /* Same white surfaces as light — use .dark only for scoped overrides if needed */
+  --syntax-cyan: #2563eb;
+  --syntax-slate: #64748b;
   --coral: #fb7185;
 
-  /* Solution Accent Colors */
-  --phone: #3b82f6; /* Blue - Phone Systems */
-  --messaging: #10b981; /* Emerald - Messaging */
-  --email: #a855f7; /* Purple - Email */
+  --phone: #2563eb;
+  --messaging: #10b981;
+  --email: #a855f7;
 
-  /* Surfaces */
-  --background: #0f172a; /* Terminal Charcoal (slate-900) */
-  --foreground: #f8fafc; /* Clean near-white */
+  --background: #ffffff;
+  --foreground: #0f172a;
 
-  --card: #111c33; /* Slightly lifted navy */
-  --card-foreground: #f8fafc;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
 
-  --popover: #111c33;
-  --popover-foreground: #f8fafc;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
 
-  /* Primary = Electric Cyan (Intelligence Layer) */
-  --primary: #06b6d4;
-  --primary-foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
 
-  /* Subtle surfaces */
-  --secondary: #162341;
-  --secondary-foreground: #f8fafc;
+  --secondary: #ffffff;
+  --secondary-foreground: #0f172a;
 
-  --muted: #162341;
-  --muted-foreground: #94a3b8; /* slate-400 */
+  --muted: #ffffff;
+  --muted-foreground: #64748b;
 
-  /* Accent surfaces (cyan-tinted hover panels) */
-  --accent: color-mix(in oklch, var(--primary) 16%, var(--background));
-  --accent-foreground: #f8fafc;
+  --accent: #ffffff;
+  --accent-foreground: #0f172a;
 
-  /* Alert / eye-catcher */
   --destructive: var(--coral);
 
-  /* Borders / inputs */
-  --border: color-mix(in oklch, #ffffff 12%, transparent);
-  --input: color-mix(in oklch, #ffffff 16%, transparent);
-  --ring: #06b6d4;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
 
-  /* Charts */
-  --chart-1: #06b6d4; /* cyan */
-  --chart-2: #38bdf8; /* sky */
-  --chart-3: #fb7185; /* coral */
-  --chart-4: #94a3b8; /* slate */
-  --chart-5: #e2e8f0;
+  --chart-1: #2563eb;
+  --chart-2: #0f172a;
+  --chart-3: #fb7185;
+  --chart-4: #64748b;
+  --chart-5: #94a3b8;
 
-  /* Sidebar */
-  --sidebar: #111c33;
-  --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #06b6d4;
-  --sidebar-primary-foreground: #0f172a;
-  --sidebar-accent: #162341;
-  --sidebar-accent-foreground: #f8fafc;
-  --sidebar-border: var(--border);
-  --sidebar-ring: #06b6d4;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #2563eb;
 }
 
 @layer base {
@@ -211,24 +198,13 @@
 }
 
 @layer utilities {
-  /* Ambient glow backgrounds */
+  /* Page shell — solid white (no tinted gradients) */
   .bg-soft-glow {
-    background:
-      radial-gradient(
-        900px circle at 18% 12%,
-        color-mix(in oklch, var(--syntax-cyan) 22%, transparent),
-        transparent 48%
-      ),
-      radial-gradient(
-        750px circle at 82% 18%,
-        color-mix(in oklch, var(--coral) 18%, transparent),
-        transparent 52%
-      ),
-      radial-gradient(
-        900px circle at 50% 95%,
-        color-mix(in oklch, var(--foreground) 6%, transparent),
-        transparent 60%
-      );
+    background: #ffffff;
+  }
+
+  .dark .bg-soft-glow {
+    background: #ffffff;
   }
 
   /* ========================================
@@ -236,40 +212,34 @@
      "Glass Box" Aesthetic
      ======================================== */
 
-  /* Standard glass panel */
+  /* Standard glass panel — opaque white */
   .glass {
-    background: color-mix(in oklch, var(--card) 60%, transparent);
+    background: #ffffff;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid color-mix(in oklch, #ffffff 10%, transparent);
+    border: 1px solid var(--border);
   }
 
-  /* Subtle glass (lighter blur) */
   .glass-subtle {
-    background: color-mix(in oklch, var(--card) 40%, transparent);
+    background: #ffffff;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid color-mix(in oklch, #ffffff 8%, transparent);
+    border: 1px solid var(--border);
   }
 
-  /* Heavy glass (stronger effect) */
   .glass-heavy {
-    background: color-mix(in oklch, var(--card) 80%, transparent);
+    background: #ffffff;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid color-mix(in oklch, #ffffff 15%, transparent);
+    border: 1px solid var(--border);
   }
 
-  /* Glass with cyan tint (Intelligence Layer) */
+  /* Glass — white panel with light border (no blue wash) */
   .glass-cyan {
-    background: color-mix(
-      in oklch,
-      var(--syntax-cyan) 8%,
-      color-mix(in oklch, var(--card) 50%, transparent)
-    );
+    background: #ffffff;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid color-mix(in oklch, var(--syntax-cyan) 20%, transparent);
+    border: 1px solid var(--border);
   }
 
   /* Terminal/code block style */
@@ -310,6 +280,24 @@
   }
   .bg-email {
     background-color: var(--email);
+  }
+
+  /* Dark “hero” panels — matches pre-white theme (slate-900 / lifted navy card) */
+  .night-surface {
+    background-color: #111c33 !important;
+    color: #f8fafc !important;
+    border-color: color-mix(in oklch, white 12%, transparent);
+  }
+
+  .night-surface .text-muted-foreground {
+    color: #94a3b8;
+  }
+
+  .night-surface h1,
+  .night-surface h2,
+  .night-surface h3,
+  .night-surface h4 {
+    color: #f8fafc;
   }
 
   /* Syntax brand colors */

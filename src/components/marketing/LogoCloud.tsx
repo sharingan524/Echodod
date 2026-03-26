@@ -7,7 +7,7 @@ const awsServices = [
 
 export function LogoCloud() {
   return (
-    <section className="bg-muted/30 border-y py-12">
+    <section className="border-border border-y bg-white py-12">
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-muted-foreground text-center text-sm font-medium">Powered by AWS</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">

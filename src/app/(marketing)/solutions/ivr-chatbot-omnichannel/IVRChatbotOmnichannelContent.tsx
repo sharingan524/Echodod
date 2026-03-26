@@ -76,14 +76,14 @@ export default function IVRChatbotOmnichannelContent() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10">
-              <Bot className="h-6 w-6 text-cyan-500" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
+              <Bot className="h-6 w-6 text-blue-500" />
             </div>
-            <span className="text-sm font-medium text-cyan-500">Amazon Connect & Lex</span>
+            <span className="text-sm font-medium text-blue-500">Amazon Connect & Lex</span>
           </div>
 
           <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-6xl">
-            Automate and Unify <span className="text-cyan-500">Every Touchpoint</span>
+            Automate and Unify <span className="text-blue-500">Every Touchpoint</span>
           </h1>
           <p className="text-muted-foreground mt-6 max-w-2xl text-lg md:text-xl">
             IVR flows, AI chatbots, and omnichannel routing — implemented and integrated so
@@ -129,10 +129,10 @@ export default function IVRChatbotOmnichannelContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
               viewport={{ once: true }}
-              className="border-border bg-card/50 rounded-xl border p-6 transition-all hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-md"
+              className="night-surface rounded-xl border border-white/10 p-6 shadow-md transition-all hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-lg"
             >
               <div className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" />
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-blue-500" />
                 <div>
                   <h3 className="font-semibold">{feature.title}</h3>
                   <p className="text-muted-foreground mt-2 text-sm">{feature.description}</p>
@@ -171,9 +171,9 @@ export default function IVRChatbotOmnichannelContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
               viewport={{ once: true }}
-              className="border-border bg-card/50 relative rounded-xl border p-6"
+              className="night-surface relative rounded-xl border border-white/10 p-6 shadow-md"
             >
-              <span className="text-4xl font-bold text-cyan-500/20">{step.step}</span>
+              <span className="text-4xl font-bold text-blue-400/40">{step.step}</span>
               <h3 className="mt-2 font-semibold">{step.title}</h3>
               <p className="text-muted-foreground mt-2 text-sm">{step.description}</p>
             </motion.div>
@@ -182,7 +182,7 @@ export default function IVRChatbotOmnichannelContent() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-20">
-        <GlassCard className="p-12 text-center">
+        <GlassCard variant="night" className="p-12 text-center">
           <GlassCardContent className="p-0">
             <h2 className="text-3xl font-bold tracking-tight">
               Ready to automate and unify your touchpoints?

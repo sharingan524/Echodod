@@ -46,7 +46,7 @@ export function ZigZagFeatures() {
             </div>
             <div
               className={cn(
-                "bg-muted/30 flex h-64 items-center justify-center rounded-2xl border",
+                "border-border flex h-64 items-center justify-center rounded-2xl border bg-white",
                 index % 2 === 1 && "md:order-1"
               )}
             >

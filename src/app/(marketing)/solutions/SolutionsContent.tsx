@@ -126,7 +126,7 @@ export default function SolutionsContent() {
               >
                 <Link
                   href={solution.href}
-                  className={`group bg-card/50 flex h-full flex-col overflow-hidden rounded-2xl border p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${colors.border} ${colors.shadow}`}
+                  className={`night-surface group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg ${colors.border} ${colors.shadow}`}
                 >
                   {/* Header */}
                   <div className="flex items-center gap-3">
@@ -222,7 +222,7 @@ export default function SolutionsContent() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="border-border bg-card/50 rounded-xl border p-5 transition-all hover:-translate-y-1 hover:shadow-md"
+              className="night-surface rounded-xl border border-white/10 p-5 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               <h3 className="font-semibold">{item.title}</h3>
               <p className="text-muted-foreground mt-2 text-sm">{item.description}</p>
@@ -233,7 +233,7 @@ export default function SolutionsContent() {
 
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 py-20">
-        <GlassCard className="p-12 text-center">
+        <GlassCard variant="night" className="p-12 text-center">
           <GlassCardContent className="p-0">
             <h2 className="text-3xl font-bold tracking-tight">
               Ready to upgrade your business communications?

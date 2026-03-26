@@ -44,7 +44,7 @@ const STATUS_CONFIG = {
   unknown: {
     icon: HelpCircle,
     color: "text-muted-foreground",
-    bg: "bg-muted/50",
+    bg: "border border-border bg-white",
     label: "Unknown",
   },
 } as const;

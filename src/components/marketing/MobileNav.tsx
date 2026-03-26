@@ -14,7 +14,8 @@ const accentDot: Record<string, string> = {
   pink: "bg-pink-500",
   rose: "bg-rose-500",
   orange: "bg-orange-500",
-  cyan: "bg-cyan-500",
+  cyan: "bg-blue-500",
+  indigo: "bg-indigo-500",
   amber: "bg-amber-500",
   fuchsia: "bg-fuchsia-500",
 };
@@ -71,7 +72,7 @@ export function MobileNav() {
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         "group rounded-xl px-3 py-3 transition",
-                        "hover:bg-muted/60 focus:bg-muted/60 focus:outline-none"
+                        "hover:bg-zinc-100 focus:bg-zinc-100 focus:outline-none"
                       )}
                     >
                       <div className="flex items-center gap-2">

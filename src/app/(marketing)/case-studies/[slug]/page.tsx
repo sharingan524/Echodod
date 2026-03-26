@@ -166,7 +166,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           {cs.services.map((s) => (
             <span
               key={s}
-              className="bg-muted text-muted-foreground rounded-full px-3 py-1 text-xs font-medium"
+              className="border-border text-muted-foreground rounded-full border bg-white px-3 py-1 text-xs font-medium"
             >
               {s}
             </span>
@@ -181,7 +181,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
       {/* Quote */}
       {cs.quote && (
-        <blockquote className="border-primary/30 bg-card/50 mb-12 rounded-xl border-l-4 p-6">
+        <blockquote className="night-surface border-primary/40 mb-12 rounded-xl border-l-4 border-white/10 p-6 shadow-md">
           <Quote className="text-primary/40 mb-3 h-6 w-6" />
           <p className="mb-4 text-lg leading-relaxed italic">&ldquo;{cs.quote.text}&rdquo;</p>
           <footer className="text-muted-foreground text-sm">

@@ -270,7 +270,7 @@ export default function DashboardPage() {
                     <p className="text-muted-foreground text-xs">{item.contactInfo}</p>
                   </div>
                   <div className="hidden shrink-0 sm:block">
-                    <span className="bg-muted rounded-md px-2 py-1 font-mono text-xs capitalize">
+                    <span className="border-border rounded-md border bg-white px-2 py-1 font-mono text-xs capitalize">
                       {item.channel}
                     </span>
                   </div>

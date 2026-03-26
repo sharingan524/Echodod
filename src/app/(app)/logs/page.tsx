@@ -246,7 +246,7 @@ export default function LogsPage() {
                         <span className="text-muted-foreground text-xs">
                           {formatTime(log.createdAt)}
                         </span>
-                        <span className="bg-muted rounded px-2 py-0.5 font-mono text-xs capitalize">
+                        <span className="border-border rounded border bg-white px-2 py-0.5 font-mono text-xs capitalize">
                           {log.channel}
                         </span>
                         <span className="text-muted-foreground text-xs capitalize">
